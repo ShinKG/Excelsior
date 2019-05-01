@@ -1,0 +1,92 @@
+MULTIPLE CHOICE
+
+1. Create or replace the state of the target resource with the state defined by the representation enclosed in the request message payload.
+	
+	a. trace
+	b. get
+	c. put
+	d. delete
+
+2. Indicates that the response to a method is allowed to be stored for future reuse
+
+	a. Idempotent Method
+	b. Cacheable Method
+	c. Connect Method
+	d. Safe Method
+
+3. API that allows access to the HTML document from within scripts associated with the web page.
+
+	a. AJAX
+	b. JSON
+	c. DOM
+	d. DOCTYPE
+
+4. Language used to specify the presentation of structurally marked up documents.
+
+	a. CSS
+	b. HTML
+	c. JavaScript
+	d. XML
+
+5. What TCP port is used to run HTTP on top of TCP/IP.
+
+	a. TCP port 25 by default or TCP port 441 for HTTPS
+	b. TCP port 80 by default or TCP port 443 for HTTPS
+	C. TCP port 110 by default or TCP port 143 for HTTPS
+	d. TCP port 53 by default or TCP port 110 for HTTPS
+
+6. Typically provided as key=value pairs with ampersand(&0 separators between key/value pairs.
+
+	a. path
+	b. query
+	c. fragment identifier
+	d. authority
+
+7. Remove the association betweem the target resource and its current functionality
+
+	a. post
+	b. get
+	c. remove
+	d. delete
+
+8. It is a high-level interpreted language and used to enhance HTML pages.
+
+	a. CSS
+	b. PHP
+	c. JavaScript
+	d. HTML	
+
+9. APIs are accessed from scripts via 
+
+	a. global object window
+	b. global object navigator
+	c. global object element
+	d. global object location
+
+10. Minimizes the request numbers made by the user through the web page
+
+	a. inline javascript
+	b. internal javascript
+	c. external javascript
+	d. inner javascript
+
+FILL IN THE BLANKS
+
+1. <button _______="start()">play</button>
+2. HTTP is a _________ communications protocol
+3. HTTP is based on a _______-server architecture
+4. var ______ = document.getElementById(elementId);
+5. var ______Var;
+6. UI element states __________.
+7. custom properties a.k.a _________.
+8. meta ______="UTF-8">
+9. __________ type declaration
+10. HTML is used to ________ documents.
+
+CHOICES
+
+pseudo-classes	element		CSS Variables
+mark up		stateless	client
+global		document	onClick
+charset
+
