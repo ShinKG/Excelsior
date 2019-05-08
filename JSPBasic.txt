@@ -1,0 +1,132 @@
+BASIC
+1.
+Q:is a web pages technology that supports dynamic content.
+A:JavaServer Pages (JSP)
+
+2 & 3
+Q:A ______ component is a type of ____ that is designed to fulfill the role of a user interface for a Java web application. 
+A:JavaServer Pages, Java servlet
+
+4.
+Q: What are web developers writing JSPs to combine text files?
+A: HTML or XHTML code
+
+5.
+Q:A _____ may contain any number of JAVA language statements, statements of variable or method, or expressions valid in the language of page scripting.
+A:scriptlet
+
+6.
+Q:A_____ declares one or more variables or methods to be used later in the JSP file in Java code.
+A:Declaration
+
+7.
+Q:A _____ element includes an expression of scripting language that is evaluated, converted to a string and inserted where the expression appears in the JSP file.
+A:JSP expression
+
+8.
+Q:The expression element may contain any expression valid in accordance with the Java Language Specification, but you can not use a _____ to terminate an expression.
+A:semicolon
+
+9.
+Q:JSP ____ mark text or statements to be ignored by the JSP container.
+A:comments
+
+10.
+Q:A JSP comment is helpful when hiding or "_____" part of the JSP page.
+A:commenting out
+
+11-16.
+(MATCHING TYPE)
+* <%-- comment --%> 	= A comment from JSP. Ignored by the engine from JSP.
+* <!-- comment -->	= A comment from HTML. The browser has ignored it.
+* <\%			= is used to represent static <% literal 
+* %\>			= is used to represent static %> literal.
+* \'			= A single quote that uses single quotes in an attribute.
+* \"			= A double quote that uses double quotes in an attribute.
+
+17.
+Q:A JSP ____ affects the servlet class overall structure.
+A:directive
+
+18:
+Q:JSP ____ use XML syntax constructs to control servlet engine behavior.
+A:actions
+
+19-28.
+(MULTIPLE CHOICE)
+*Q:Includes a file when the page is requested
+a.jsp:include
+b.jsp:attribute
+c.jsp:plugin
+A:A.
+
+*Q:Finds or instantiates a JavaBean
+a.jsp:setProperty
+b.jsp:element
+c.jsp:useBean
+
+A:C.
+
+*Q:Sets a JavaBean property
+a.jsp:getProperty
+b.jsp:setProperty
+c.jsp:body
+
+A:B.
+
+*Q:Inserts a JavaBean property into the output
+a.jsp:setProperty
+b.jsp:text
+c.jsp:getProperty
+
+A:C.
+
+*Q:Forward the requester to a new page
+a.jsp:plugin
+b.jsp:forward
+c.jsp:body
+
+A:B.
+
+*Q:Generates browser-specific code making an OBJECT or EMBED tag
+a.jsp:plugin
+b.jsp:forward
+c.jsp:body
+
+A:A.
+
+*Q:Dynamically defines XML elements.
+a.jsp:setProperty
+b.jsp:element
+c.jsp:useBean
+
+A:B.
+
+*Q:Defines the attribute of the dynamically defined XML element.
+a.jsp:include
+b.jsp:attribute
+c.jsp:plugin
+A:B.
+
+*Q:Defines dynamically defined XML element's body.
+a.jsp:include
+b.jsp:attribute
+c.jsp:body
+A:C.
+
+*Q:Use JSP pages and documents to write template text.
+a.jsp:text
+b.jsp:attribute
+c.jsp:plugin
+A:A.
+
+29.
+Q:A JSP provides Java's full power to integrate into your web application.
+A:Control-Flow Statements:
+
+30.
+Q:A JSP supports all Java-supported logical and arithmetic operators.
+A:JSP Operators
+
+http://pkhalder.com/?q=node/12
+18 December 2013, pkhhalder
