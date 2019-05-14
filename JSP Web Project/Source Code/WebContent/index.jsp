@@ -18,6 +18,11 @@
 	<a href="login_student.jsp">Student</a>
 	<br>
 	<a href="login_tutor.jsp">Tutor</a>
+	
+	<h3>Register as a Student:</h3>
+	<a href="registration_student.jsp">Student Registration</a>
+	<h3>Register as a Tutor:</h3>
+	<a href="registration_tutor.jsp">Tutor Registration</a>
 
 </body>
 
