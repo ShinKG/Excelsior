@@ -1,0 +1,98 @@
+Advanced JSP
+
+1.Which tag should be used to transfer JSP to JSP included information?
+a) Using <%jsp:page> tag (right answer)
+b) Using <%jsp:param> tag
+c) Using <%jsp:import> tag
+d) Using <%jsp:useBean> tag
+
+2.jspService() method is created by _____. Hence, it should not be overridden.
+Answer:JSP container
+
+3.Which session scope option is true?
+a)Objects can only be accessed from the page where they are created.
+b)Objects are only accessible from the same session pages (right answer)
+c)Objects can only be accessed from the pages that process the same request
+d)Objects can only be accessed from the pages in the same application
+
+4.Which one in the JSP life cycle is the correct order of phases?
+a) Initialization, Cleanup, Compilation, Execution
+b) Initialization, Compilation, Cleanup, Execution
+c) Compilation, Initialization, Execution, Cleanup (right answer)
+d) Cleanup, Compilation, Initialization, Execution
+
+5.Which tag is compulsory?
+a) id, type
+b) id, id
+c) type, property
+d) type,class (right answer)
+
+6."Request" is an example of which classes below?
+a) Request
+b) HttpRequest
+c) HttpServletRequest(right answer)
+d) ServletRequest
+
+7.Only one instance of a ____ may be available to the servlets of a
+Web application
+Answer:ServletContext
+
+8.that sets an attribute in the ServletContext, and ContextGetAttribute
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class ________ extends HttpServlet {
+
+a)ContextSetAttribute(right answer)
+b)ContextGetAtrribute
+c)ServletContext
+
+10.A _____ is a global definition sent to the JSP engine that remains
+valid regardless of any specific requests made to the JSP page
+Answer:JSP directive
+
+11.The syntax of a directive is:
+a)<%@ directive directive_lastname = value %>
+b)<%@ directive directive_attr_name = value %>(right answer)
+c)<%@ directive attr_middlename = value %>
+
+12.The ___ directive allows custom extensions to be made to the tags known
+to the JSP engine
+Answer:taglib
+
+13.JSP supports embedding of Java code fragments within a JSP by using a
+______ block.
+Answer:scriptlet 
+
+14.The ___ tag is used to declare a JavaBean object that you want to
+use within the JSP
+Answer:jsp:useBean
+
+15.Once the bean is declared with jsp: useBean, the __________, which inserts the primitive type or object string value into the output stream, allows you to access its exposed properties.
+Answer:jsp: getProperty tag
+
+16.By the jspService() method, which of the following exceptions can be thrown?
+a)javax.servlet.ServletException and javax.servlet.jsp.JSPException
+b)javax.servlet.ServletException and java.io.IOException(right answer)
+c)javax.servlet.jsp.JSPException and java.io.IOException
+
+17.Which statement about JSP scripting elements are NOT TRUE?
+a)It is legal to include a statement in the source of the JSP page, as long as it appears outside of other elements.
+b)It is legal to include an expression in a statement(right answer)
+c)Embedding an expression in a scriptlet is illegal
+
+18.JSP _____ is used to evaluate a single Java expression and display its result.
+Answer:Expression
+
+19.Give three types of java servelt methods:
+a)init(), destroy(), service() (right answer)
+b)set(), get(), push()
+c)init(), get(), destroy()
+
+20.SP scriptlets allow you to do more _____ than inserting a single Java expression
+Answer:complex operations
+
+http://www.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html
+http://courses.coreservlets.com/Course-Materials/msajsp.html
+https://www.redbooks.ibm.com/redbooks/pdfs/sg245755.pdf
