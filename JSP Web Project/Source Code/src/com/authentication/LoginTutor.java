@@ -27,7 +27,7 @@ public class LoginTutor extends HttpServlet {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("Username", Username);
-			response.sendRedirect("home.jsp");
+			response.sendRedirect("tutordashboard.jsp");
 			
 		} else {
 			
