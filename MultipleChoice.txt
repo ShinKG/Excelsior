@@ -1,0 +1,231 @@
+HTML MULTIPLE CHOICE
+
+1. Design to enable communications between client and servers.
+
+	a. html		c. doctype
+	b. http		d. ftp
+
+2. First official default character set in windows.
+
+	a. ANSI		c. ASSI
+	b. ASCII	d. ASKI
+
+3. Language used to marked up documents
+
+	a. XML		c. MathML
+	b. XHTML	d. HTML
+
+4. Used to draw graphics via scripting.
+
+	a. HTML5 canvas		c. HTML5 draw
+	b. HTML5 context	d. HTML5 method
+
+5. Specifies the visible width of a text area
+
+	a. border	c. cols
+	b. cite		d. colspan
+
+6. Declarative header section containing document metadata
+
+	a. doctype	c. root element
+	b. attributes	d. values
+
+7. Specifies the title of the text track
+
+	a. label	c. ismap
+	b. list		d. lang
+
+8. Defines information about the document
+
+	a. <title>	c. <html>
+	b. <head>	d. <body>
+
+9. Typically provided as key=value pairs with ampersand (&) separators between key/value pairs.
+
+	a. path		c. authority
+	b. scheme	d. query
+
+10. Specifies extra information about an element.
+
+	a. translate	c. spellcheck
+	b. title	d. tabindex
+
+11. Returns the URL of the current audio/video.
+
+	a. crossOrigin	c. currentSrc
+	b. controls	d.controller
+
+12. Remove the association between the target resource and its current functionality.
+
+	a. delete	c. post
+	b. remove	d. get
+
+13. Other term for message body
+
+	a. empty line		c. status code
+	b. request target	d. payload
+
+14. Defines a thematic change in the content
+
+	a. <br>		c. <hr>
+	b. <h1>		d. <h6>
+
+15. Defines the title of a work.
+	
+	a. <cite>	c. <caption>
+	b. <title>	d. <data>
+
+CSS MULTIPLE CHOICE
+
+1. Other term for custom properties.
+
+	a. CSS-Wide Keywords	c. CSS variables
+	b. CSS values		d. CSS methods
+
+2. Delimited by single quotes (') or double quotes (").
+
+	a. strings	c. processorrs
+	b. functions	d. keywords
+
+3. Used in animation, transition and related properties.
+
+	a. angle units		c. length units
+	b. duration		d. frequency units
+
+4. Provides features that developers expect browsers to provide natively.
+
+	a. frameworks		c.preprocessors
+	b. polyfills		d. variables
+
+5. CSS stands for?
+
+	a. Common Style Sheets	c. Custom Style Sheet
+	b. Control Style Sheets	d. Cascading Style Sheet
+
+6. This type of css style is written directly in the tag in the HTML document
+
+	a. Inline Styles	c. Embedded Styles
+	b. External Sytles	d. Inner Styles
+
+7. Modern CSS framework with built in responsiveness.
+
+	a. CSS3		c. CSS2
+	b. W4.CSS	d. W3.CSS
+
+8. Specify a length relative to another length property.
+
+	a. absolute length	c. relative length
+	b. alternative length	d. counter length
+
+9. Language used to specify the presentation of structurally marked up documents.
+
+	a. CSS		c. SSL
+	b. W3C		d. CSL
+
+10. Other term for vendor specific extensions.
+
+	a. vendor properties	c. vendor values
+	b. vendor prefixes	d. vendor types
+
+11. Integers or reals in decimal notation.
+
+	a. numbers	c. units
+	b. values	d. time
+
+12. Type of css that is separated and full of CSS instructions.
+
+	a. Outer style sheet		c. External style sheet
+	b. Internal style sheet		d. Inline style sheet
+
+13. Relative to the font size of the root element
+
+	a. ex		c. rem
+	b. em		d. vmin
+
+14. Creates or resets a counter
+
+	a. reset		c. counter-increment
+	b. counter-reset	d. counter-remove
+
+15. Use to add space inside the text field
+
+	a. float	c. overflow
+	b. align	d. padding
+
+
+JS multiple choice
+
+1. Used to prevent execution when testing alternative code.
+
+	a. JS Variables		c. JS Syntax
+	b. JS Comments		d. JS Events
+
+2. Other term for linked scripts.
+
+	a. inline scripts	c. external scripts
+	b. internal scripts	d. outer scripts
+
+3. What do you call to the colour of the text?
+
+	a. fgColor	c. alinkColor
+	b. bgColor	d. linkColor
+
+4. API that allows access to the HTML document.
+
+	a. DOM		c. AJAX
+	b. JSON		d. XHTML	
+
+5. Use to provide a wide range of interactive features
+
+	a. BOM		c. DOCTYPE
+	b. API		d. CGI	
+
+6. Container which has a name.
+
+	a. Literal	c. Variable
+	b. Numeric	d. Integer
+
+7. It is a set of variables
+
+	a. Object	c. Data
+	b. Arrays	d. Elements
+
+8. A value which can be only be either true or false
+
+	a. Boolean	c. Numeric
+	b. String	d. Float
+
+9. The number of elements in the form
+
+	a. numbers	c. operation
+	b. numeric	d. length
+
+10. A group of text characters
+
+	a. boolean	c. string
+	b. loop		d. integer
+
+11. Programming language of HTML and the web.
+
+	a. CSS		c. JavaScript
+	d. HTML		d. Phyton
+
+12. Increase efficiency and improve maintainability across a website.
+	
+	a. Internal JavaScript		c. Inline JavaScript
+	b. External JavaScript		d. Inner JavaScript
+
+13. Adds one or more new elements to the beginning of an array
+
+	a. unshift()		c. shift()
+	c. add()		d. new()
+
+14. Removes the last element from the end of an array
+
+	a. slice() 		c. remove()
+	b. delete()		d. pop()
+
+15. JavaScripts only runs on?
+
+	a. Live Scripts		c. Internet
+	c. Microsystems		d. Netscape browsers
