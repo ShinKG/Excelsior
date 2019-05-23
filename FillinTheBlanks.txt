@@ -1,0 +1,55 @@
+HTML fill in the blanks
+
+1. _______ was design to enable communications between client and servers.
+2. The first official default character set in windows is _________.
+3. _______ is a language used to marked up documents.
+4. Use ________ to draw graphics.
+5. _______ specifies the visible width of a text area.
+6. Root element is a declarative header section that contains document meta_____?
+7. _______ specifies the title of the text track.
+8. _______  is used to define information about the document.
+9. _______ provides key=value pairs with ampersand separators between key/value pairs.
+10. Use _______ to specify extra information about an element.
+11. The _______ is used to return the URL of the current audio/video.
+12. _______ is used to remove the association between the target resource and its current functionality.
+13. Message Body a.k.a _______?
+14. ______ is used to defined the thematic change in the content.
+15. ______ defines the title of a work.
+
+
+CSS FILL IN THE BLANKS
+
+1. Custom Properties a.k.a _______?
+2. _______ is delimited by single quotes (') or double quotes (").
+3. _______ is a value type used in animation, transition and related properties.
+4. _______ provides features that developers expect browsers to provide natively.
+5. CSS stands for _____________?
+6. _______ is a type of css wherein css style is written directly in the tag in the HTML document
+7. ______ is a modern css framework with built in responsiveness.
+8. ______ specify a length relative to another length property.
+9. _______ is used to specify the presentation of structurally marked up documents.
+10. vendor specific extensions a.k.a ________?
+11._______ are integers or reals in decimal notation.
+12._______ is a type of css that is separated and full of CSS instructions.
+13._______ is relative to the font size of the root element
+14. Use __________ to Create or reset a counter
+15. Use __________ to add space inside the text field.
+
+
+JS fill in the blanks
+
+1. ________ is used to prevent execution when testing alternative code.
+2. Linked scripts a.k.a _________.
+3. ________ is called as the colour of a text.
+4. ________ is an API that allows access to the HTML document.
+5. ________ is used to provide a wide range of interactive features.
+6. A _______ is a container which has a name.
+7. An ______ is a set of variables.
+8. _______ is a value which returns either true or false.
+9. _______ is called as the number or elements in the form.
+10. _______ is a group of text characters.
+11. _______ is the programming language of HTML and the web.
+12. ________ increase efficiency and improve maintainability across a website.
+13. ______ is used to add one or new more elements in the beginning of an array.
+14. _______ is used to remove the last element from the end of an array.
+15. JavaScripts only runs on __________.
