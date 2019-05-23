@@ -1,0 +1,108 @@
+HTML multiple choice
+
+1. B
+2. A
+3. D
+4. A
+5. C
+6. C
+7. A
+8. B
+9. D
+10.B
+11.C
+12.A
+13.D
+14.C
+15.A
+
+HTML fill in the blanks
+
+1. http
+2. ansi
+3. html
+4. HTML5 canvas
+5. cols
+6. data
+7. label
+8. <head>
+9. query
+10.title
+11.currentSrc
+12.delete
+13.payload
+14.<hr>
+15.<cite>
+
+
+CSS multiple choice
+
+1. C
+2. A
+3. B
+4. B
+5. D
+6. A
+7. D
+8. C
+9. A
+10.B
+11.A
+12.C
+13.C
+14.B
+15.D
+
+CSS Fill in the blanks
+
+1. CSS variables
+2. Strings 
+3. Duration
+4. Polyfills
+5. Cascading style sheet
+6. Inline Styles
+7. W3.CSS
+8. Relative length
+9. CSS
+10.Vendor prefixes
+11.Numbers
+12.External style sheet
+13.rem
+14.counter-reset
+15.padding
+
+JS multiple choice
+
+1. B
+2. C
+3. A
+4. A
+5. D
+6. C
+7. B
+8. A
+9. D
+10.C
+11.C
+12.B
+13.A
+14.D
+15.D
+
+JS fill in the blanks
+
+1. JS Comments
+2. External Scripts
+3. fgColor
+4. DOM
+5. CGI
+6. Variable
+7. Array
+8. Boolean
+9. Length
+10.String
+11.JavaScript
+12.External JavaScript
+13.unshift()
+14.pop()
+15.Netscape browsers
