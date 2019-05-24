@@ -149,16 +149,7 @@
                 const output = [];
 
                 myQuestions.forEach((currentQuestion, questionNumber) => {
-                const answers = [];
-                for (letter in currentQuestion.answers) {
-                    answers.push(
-                    `<label>
-                        <input type="radio" name="question${questionNumber}" value="${letter}">
-                        ${letter} :
-                        ${currentQuestion.answers[letter]}
-                    </label>`
-                    );
-                }
+                
                 output.push(
                     `<div class="slide">
                     <div class="question"> ${currentQuestion.question} </div>
@@ -170,7 +161,7 @@
             }
 
             function showResults() {
-                const answerContainers = quizContainer.querySelectorAll(".answers");
+                const answerContainers = quizContainer.querySelectorAll(".answer");
                 let numCorrect = 0;
                 myQuestions.forEach((currentQuestion, questionNumber) => {
                 const answerContainer = answerContainers[questionNumber];
