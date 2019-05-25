@@ -17,9 +17,9 @@
 	<p>Input the number of questions that you would want to answer for the quiz.</p>
 	<p>There are a total of 15 questions available.</p>
 	
-	<form action="#" method="POST">
+	<form action="StartQuiz" method="POST">
 		<input type="hidden" name="quizTopic" value="js">
-		<input type="number" name="numOfQuestions" min="1" max="15">
+		<input type="number" name="numOfQuestions" min="1" max="15" required>
 		<br>
 		<input type="submit" value="Start the Quiz">
 	</form>
