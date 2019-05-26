@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<style>                
+        body{
+            font-size: 20px;
+            font-family: 'Work Sans', sans-serif;
+            color: #333;
+            font-weight: 300;
+            text-align: center;
+            background-color: #f8f6f0;
+        }
+        h1{
+            font-weight: 300;
+            margin: 0px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #444;
+            color: #fff;
+        }
+        .question{
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .slide{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .active-slide{
+            opacity: 1;
+            z-index: 2;
+        }
+        .quiz-container{
+            position: relative;
+            height: 200px;
+            margin-top: 40px;
+        }
+        .textf {
+            text-align:center;
+            font-size: 20px;
+            height: 50px;
+            width: 60%
+        }
+    </style>
+</head>
+<body>
+	<h1>Quiz</h1>
+	<div class="quiz-container">
+		<div id="quiz"></div>
+	</div>
+	<button id="previous">Previous Question</button>
+	<button id="next">Next Question</button>
+	<button id="submit">Submit Quiz</button>
+	<div id="results"></div>
+	<div id="correct"></div>
+    <script>
+        (function() {
+            const myQuestions = [
+                {
+                question: "What is the meaning of HTML?",
+                answers: {
+                    a: "Healthy Terminator Musical Language",
+                    b: "Hypertext Markup Language",
+                    c: "Waluigi, obviously"
+                },
+                correctAnswer: "b"
+                },
+                {
+                question: "Each page contains a number of _________ to other pages.",
+                answers: {
+                    a: "hyperlinks",
+                    b: "markup link",
+                    c: "language"
+                },
+                correctAnswer: "a"
+                },
+                {
+                question: "The _______ characterizes this document to be HTML5",
+                answers: {
+                    a: "!DOCTYPE html",
+                    b: "html",
+                    c: "body"
+                },
+                correctAnswer: "a"
+                },
+                {
+                question: "What is an element that contains the visible page substance?",
+                answers: {
+                    a: "!DOCTYPE html",
+                    b: "html",
+                    c: "body"
+                },
+                correctAnswer: "c"
+                },
+                {
+                question: "What comes after /head tag?",
+                answers: {
+                    a: "head",
+                    b: "body",
+                    c: "mouthwash"
+                },
+                correctAnswer: "b"
+                },
+                {
+                question: "An attribute that indentifies an element unique to it.",
+                answers: {
+                    a: "id",
+                    b: "class",
+                    c: "style"
+                },
+                correctAnswer: "a"
+                },
+                {
+                question: "An attribute that is used to reference CSS elements.",
+                answers: {
+                    a: "id",
+                    b: "class",
+                    c: "style"
+                },
+                correctAnswer: "b"
+                },
+                {
+                question: "Which of the following is not a HTML editors",
+                answers: {
+                    a: "BlueGriffon",
+                    b: "Brackets",
+                    c: "Serenity"
+                },
+                correctAnswer: "c"
+                },
+                {
+                question: "Who created HTML?",
+                answers: {
+                    a: "Thanos The Terrible ",
+                    b: "Crisostomo Ibarra ",
+                    c: "Tim Berners-Lee"
+                },
+                correctAnswer: "c"
+                }
+            ];
+            function buildQuiz() {
+                const output = [];
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                
+                output.push(
+                    `<div class="slide">
+                    <div class="question"> ${currentQuestion.question} </div>
+                    <div class="answer"> <input type="text" name="answer" class="textf"> </div>
+                    </div>`
+                );
+                });
+                quizContainer.innerHTML = output.join("");
+            }
+            function showResults() {
+                const answerContainers = quizContainer.querySelectorAll(".answer");
+                let numCorrect = 0;
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+                const answerContainer = answerContainers[questionNumber];
+                const selector = `input[name=question${questionNumber}]:checked`;
+                const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+                if (userAnswer === currentQuestion.correctAnswer) {
+                    numCorrect++;
+                    answerContainers[questionNumber].style.color = "lightgreen";
+                } else {
+                    answerContainers[questionNumber].style.color = "red";
+                }
+                });
+                resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+            }
+            function showSlide(n) {
+                slides[currentSlide].classList.remove("active-slide");
+                slides[n].classList.add("active-slide");
+                currentSlide = n;
+                
+                if (currentSlide === 0) {
+                previousButton.style.display = "none";
+                } else {
+                previousButton.style.display = "inline-block";
+                }
+                
+                if (currentSlide === slides.length - 1) {
+                nextButton.style.display = "none";
+                submitButton.style.display = "inline-block";
+                } else {
+                nextButton.style.display = "inline-block";
+                submitButton.style.display = "none";
+                }
+            }
+            function showNextSlide() {
+                showSlide(currentSlide + 1);
+            }
+            function showPreviousSlide() {
+                showSlide(currentSlide - 1);
+            }
+            const quizContainer = document.getElementById("quiz");
+            const resultsContainer = document.getElementById("results");
+            const submitButton = document.getElementById("submit");
+            buildQuiz();
+            const previousButton = document.getElementById("previous");
+            const nextButton = document.getElementById("next");
+            const slides = document.querySelectorAll(".slide");
+            let currentSlide = 0;
+            showSlide(0);
+            submitButton.addEventListener("click", showResults);
+            previousButton.addEventListener("click", showPreviousSlide);
+            nextButton.addEventListener("click", showNextSlide);
+            })();
+    </script>
+</html>
