@@ -20,6 +20,8 @@ public class QuizDAO {
 	private static String DBPassword = "";
 	
 	String SQLQuestionList = "SELECT * FROM questions WHERE topic = ? ORDER BY RAND() LIMIT ?";
+	String SQLRecordResult = "INSERT INTO results (topic, score, total_score, evaluation) VALUES (?, ?, ?, ?)";
+	String SQLRetrieveResult = "SELECT * FROM results WHERE ";
 	
 	public Connection createDBConnection() {
 		
@@ -120,6 +122,32 @@ public class QuizDAO {
 		}
 		
 		return questionList;
+		
+	}
+	
+	public void recordResult(Connection dbConnection, String QuizTopic, int score, int totalScore) {
+		
+		int passingGrade = 0;
+		String Evaluation = "FAIL";
+		
+		passingGrade = (totalScore / 2) + 1;
+		
+		if (score >= passingGrade) {
+			Evaluation = "PASS";
+		}
+		
+		try {
+			PreparedStatement pStmt = dbConnection.prepareStatement(SQLRecordResult);
+			
+			pStmt.setString(1, QuizTopic);
+			pStmt.setInt(2, score);
+			pStmt.setInt(3, totalScore);
+			pStmt.setString(4, Evaluation);
+			
+			pStmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 
