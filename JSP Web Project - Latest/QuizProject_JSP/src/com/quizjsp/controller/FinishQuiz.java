@@ -1,6 +1,12 @@
+/*  
+ * @author Jaewin-Chino Ramos, Hershey Nicole Bagcal, Kyeongho Shin
+ */
+
 package com.quizjsp.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.quizjsp.model.QuizDAO;
+import com.quizjsp.model.UserAnswerInfo;
 
 @WebServlet("/FinishQuiz")
 public class FinishQuiz extends HttpServlet {
@@ -21,35 +28,49 @@ public class FinishQuiz extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession quizSession = request.getSession();
+		List<UserAnswerInfo> userAnswerList = new ArrayList<UserAnswerInfo>();
 		
-		String UserAnswer = "";
-		String KeyAnswer = "";
-		String QuizTopic = "";
 		int totalScore = 0;
 		int userScore = 0;
+		int questionID = 0;
+		String QuizTopic = "";
+		String Question = "";
+		String UserAnswer = "";
+		String UserAnswerDesc = "";
+		String KeyAnswer = "";
+		String KeyAnswerDesc = "";
 		
 		QuizTopic = (String) quizSession.getAttribute("topic");
-		totalScore = Integer.parseInt(request.getParameter("questionCount"));
+		totalScore = Integer.parseInt(request.getParameter("questionCtr"));
 		
-		System.out.println(QuizTopic);
-		
-		for (int i = 1; i <= totalScore; i++) {
+		for (int ctr = 1; ctr <= totalScore; ctr++) {
 			
-			if (request.getParameter("option"+i) != null) {
-				
-				UserAnswer = request.getParameter("option"+i);
-				KeyAnswer = request.getParameter("answer"+i);
-				
-				System.out.println("User's Answer: "+UserAnswer);
-				System.out.println("Key Answer: "+KeyAnswer);
-					
-				if (UserAnswer.equals(KeyAnswer)) {
-					userScore++;
-				}
-				
+			questionID = (Integer) quizSession.getAttribute("question_id_"+ctr);
+			Question = (String) quizSession.getAttribute("question_"+ctr);
+			UserAnswer = (String) quizSession.getAttribute("user_answer_"+ctr);
+			UserAnswerDesc = (String) quizSession.getAttribute("user_answer_desc_"+ctr);
+			KeyAnswer = (String) quizSession.getAttribute("key_answer_"+ctr);
+			KeyAnswerDesc = quizDAO.getKeyAnswer(quizDAO.createDBConnection(), questionID, KeyAnswer);
+			quizSession.setAttribute("key_answer_desc_"+ctr, KeyAnswerDesc);
+			
+			UserAnswerInfo userAnswerInfo = new UserAnswerInfo();
+			userAnswerInfo.setQuestionID(questionID);
+			userAnswerInfo.setQuestion(Question);
+			userAnswerInfo.setUserAnswer(UserAnswer);
+			userAnswerInfo.setUserAnswerDesc(UserAnswerDesc);
+			userAnswerInfo.setKeyAnswer(KeyAnswer);
+			userAnswerInfo.setKeyAnswerDesc(KeyAnswerDesc);
+			userAnswerList.add(userAnswerInfo);
+			
+			quizSession.setAttribute("evalUserAnswerList", userAnswerList);
+			
+			if (UserAnswer.equals(KeyAnswer)) {
+				userScore++;
 			}
 			
 		}
+		
+		// User score evaluation
 		
 		int passingScore = 0;
 		String Evaluation = "FAIL";
@@ -85,26 +106,13 @@ public class FinishQuiz extends HttpServlet {
 			Evaluation = "PASS";
 		}
 		
-		/**
-		try {
-			quizDAO.recordResult(quizDAO.createDBConnection(), QuizTopic, userScore, questionCount);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		**/
+		// Pass the evaluation data to session variable
 		
 		quizSession.setAttribute("user_score", userScore);
 		quizSession.setAttribute("total_score", totalScore);
 		quizSession.setAttribute("evaluation", Evaluation);
 		
-		System.out.println("Quiz Topic: "+QuizTopic);
-		System.out.println("Passing Grade: "+passingScore);
-		System.out.println("Question Count: "+totalScore);
-		System.out.println("User Score: "+userScore);
-		System.out.println("Rating: "+userScore+"/"+totalScore);
-		
-		requestDispatcher = request.getServletContext().getRequestDispatcher("/result.jsp");
+		requestDispatcher = request.getServletContext().getRequestDispatcher("/quiz_result.jsp");
 		requestDispatcher.forward(request, response);
 		
 	}

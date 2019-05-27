@@ -5,19 +5,22 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>INDEX.JSP</title>
+	<title>EXCELSIOR! JSP Quiz WebApp</title>
 </head>
 
 <body>
-
-	<h1>INDEX.JSP</h1>
 	
-	<a href="desc_html.jsp">HTML QUIZ</a>
-	<br>
-	<a href="desc_css.jsp">CSS QUIZ</a>
-	<br>
-	<a href="desc_js.jsp">JAVASCRIPT QUIZ</a>
-	<br>
+	<center>
+	
+	<h1>EXCELSIOR!</h1>
+	<h2>Java Server Pages and Servlets - Quiz Application</h2>
+	<h3>Click any of the buttons below to go to the respective quiz landing pages of each topic.</h3>
+	
+	<input type="button" onclick="location.href='desc_html.jsp';" value="HTML QUIZ" />
+	<input type="button" onclick="location.href='desc_css.jsp';" value="CSS QUIZ" />
+	<input type="button" onclick="location.href='desc_js.jsp';" value="JAVASCRIPT QUIZ" />
+	
+	</center>
 	
 </body>
 

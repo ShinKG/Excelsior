@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2019 at 05:52 PM
+-- Generation Time: May 27, 2019 at 02:01 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -91,21 +91,6 @@ INSERT INTO `questions` (`question_id`, `topic`, `question`, `option_a`, `option
 (44, 'JS', 'Removes the last element from the end of an array.', 'slice()', 'delete()', 'decrement()', 'pop()', 'remove()', 'D'),
 (45, 'JS', 'At what version did Internet Explorer started to support JavaScript?', 'Internet Explorer 6.0', 'Internet Explorer 5.0', 'Internet Explorer 4.0', 'Internet Explorer 3.0', 'Internet Explorer 2.0', 'E');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `results`
---
-
-CREATE TABLE `results` (
-  `result_id` int(8) NOT NULL,
-  `topic` varchar(256) NOT NULL,
-  `category` enum('5','10','15') NOT NULL,
-  `score` int(4) NOT NULL,
-  `evaluation` enum('PASS','FAIL') NOT NULL,
-  `user` varchar(64) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 --
 -- Indexes for dumped tables
 --
@@ -117,12 +102,6 @@ ALTER TABLE `questions`
   ADD PRIMARY KEY (`question_id`);
 
 --
--- Indexes for table `results`
---
-ALTER TABLE `results`
-  ADD PRIMARY KEY (`result_id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -131,12 +110,6 @@ ALTER TABLE `results`
 --
 ALTER TABLE `questions`
   MODIFY `question_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
---
--- AUTO_INCREMENT for table `results`
---
-ALTER TABLE `results`
-  MODIFY `result_id` int(8) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

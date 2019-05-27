@@ -1,3 +1,7 @@
+/*  
+ * @author Jaewin-Chino Ramos
+ */
+
 package com.quizjsp.controller;
 
 import java.io.IOException;
@@ -26,12 +30,16 @@ public class StartQuiz extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		// Create session variable
 		HttpSession quizSession = request.getSession();
 		List<QuestionInfo> questionList;
 		
 		QuizTopic = request.getParameter("quizTopic");
 		numberOfQuestions = Integer.parseInt(request.getParameter("numOfQuestions"));
 		
+		// Get questions from database using QuizDAO data access object
+		// then pass the data to the session variable for retrieval and
+		// display on the quiz page
 		try {
 			
 			questionList = quizDAO.getQuestionList(quizDAO.createDBConnection(), QuizTopic, numberOfQuestions);

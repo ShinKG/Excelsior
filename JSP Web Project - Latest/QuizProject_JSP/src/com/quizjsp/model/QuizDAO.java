@@ -1,3 +1,7 @@
+/*  
+ * @author Jaewin-Chino Ramos, Kyeongho Shin, Hershey Nicole Bagcal
+ */
+
 package com.quizjsp.model;
 
 import java.sql.Connection;
@@ -9,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.quizjsp.model.QuestionInfo;
+
 //Code Testing Imports:
 import java.sql.ResultSetMetaData;
 
@@ -20,8 +25,7 @@ public class QuizDAO {
 	private static String DBPassword = "";
 	
 	String SQLQuestionList = "SELECT * FROM questions WHERE topic = ? ORDER BY RAND() LIMIT ?";
-	String SQLRecordResult = "INSERT INTO results (topic, score, total_score, evaluation) VALUES (?, ?, ?, ?)";
-	String SQLRetrieveResult = "SELECT * FROM results WHERE ";
+	String SQLGetCorrectAnswer = "SELECT option_a, option_b, option_c, option_d, option_e FROM questions WHERE question_id = ?";
 	
 	public Connection createDBConnection() {
 		
@@ -82,8 +86,8 @@ public class QuizDAO {
 			
 			questionSet = pStmt.executeQuery();
 			
-			// Print Question Result Set
-			// Start of Snippet
+			// Print Question Result Set in console.
+			// Start of Code Block
 			
 			/**
 			ResultSetMetaData rsmd = questionSet.getMetaData();
@@ -99,7 +103,7 @@ public class QuizDAO {
 			}
 			**/
 			
-			// End of Snippet
+			// End of Code Block
 			
 			while (questionSet.next()) {
 				
@@ -125,30 +129,55 @@ public class QuizDAO {
 		
 	}
 	
-	public void recordResult(Connection dbConnection, String QuizTopic, int score, int totalScore) {
+	public String getKeyAnswer(Connection dbConnection, int questionID, String KeyAnswer) {
 		
-		int passingGrade = 0;
-		String Evaluation = "FAIL";
-		
-		passingGrade = (totalScore / 2) + 1;
-		
-		if (score >= passingGrade) {
-			Evaluation = "PASS";
-		}
+		String AnswerDesc = "";
+		String OptionA = "";
+		String OptionB = "";
+		String OptionC = "";
+		String OptionD = "";
+		String OptionE = "";
 		
 		try {
-			PreparedStatement pStmt = dbConnection.prepareStatement(SQLRecordResult);
 			
-			pStmt.setString(1, QuizTopic);
-			pStmt.setInt(2, score);
-			pStmt.setInt(3, totalScore);
-			pStmt.setString(4, Evaluation);
+			PreparedStatement pStmt = dbConnection.prepareStatement(SQLGetCorrectAnswer);
+			ResultSet answerSet;
 			
-			pStmt.executeUpdate();
+			pStmt.setInt(1, questionID);
+			
+			answerSet = pStmt.executeQuery();
+			
+			while (answerSet.next()) {
+				OptionA = answerSet.getString("option_a");
+				OptionB = answerSet.getString("option_b");
+				OptionC = answerSet.getString("option_c");
+				OptionD = answerSet.getString("option_d");
+				OptionE = answerSet.getString("option_e");
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
+		switch (KeyAnswer) {
+			case "A":
+				AnswerDesc = OptionA;
+				break;
+			case "B":
+				AnswerDesc = OptionB;
+				break;
+			case "C":
+				AnswerDesc = OptionC;
+				break;
+			case "D":
+				AnswerDesc = OptionD;
+				break;
+			case "E":
+				AnswerDesc = OptionE;
+				break;
+		}
+		
+		return AnswerDesc;
 	}
 
 }
